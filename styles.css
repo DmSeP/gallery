@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background: #2c3743;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #242f3d;
+  width: 100%;
+  color: #fff;
+  padding: 0 40px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#navigation {
+  margin-right: 40px;
+}
+header li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color: #7177f8;
+}
+a:hover > h3 {
+  text-decoration: underline;
+}
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+.slide {
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: #fff;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 500ms ease-in-out;
+  box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.5);
+}
+.slide h3 {
+  font-size: 24px;
+  margin: 0;
+  opacity: 0;
+}
+
+.wiki {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+}
+
+.slide.active {
+  flex: 10;
+}
+.slide.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+#separation {
+  margin-left: 5px;
+  margin-right: 5px;
+}
